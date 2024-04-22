@@ -11,4 +11,3 @@ class Title(object):
     def page_config(self, title):
         self.title = title
         st.set_page_config(page_title=self.title)
-

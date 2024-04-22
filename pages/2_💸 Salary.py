@@ -22,7 +22,7 @@ with col2:
                  ["India", "United States", "Canada"]
                  )
 
-data_path = f"/Users/ayankumar/Documents/SkillQuest_Frontend/Dataset/Salary/{country}.csv"
+data_path = f"Dataset/Salary/{country}.csv"
 df = pd.read_csv(data_path)
 data = {
     'Job': [],

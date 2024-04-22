@@ -28,7 +28,7 @@ skills = st.radio("Skills:",
           "Cloud", "Libraries", "Frameworks"],
           horizontal = True)
 
-data_path = f"/Users/ayankumar/Documents/SkillQuest_Frontend/Dataset/skills/{country}/{skills}.csv"
+data_path = f"Dataset/skills/{country}/{skills}.csv"
 df = pd.read_csv(data_path)
 data = {
     'Skill': [],
