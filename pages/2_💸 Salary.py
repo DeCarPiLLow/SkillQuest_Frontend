@@ -50,7 +50,7 @@ hor_bar = alt.Chart(source).mark_bar(
     x=alt.X('Avg_Salary:Q', axis=alt.Axis(format='', labelFontSize=0, titleFontSize=0, labelPadding=20)),
     y=alt.Y('Job:N', sort=None, title="", axis=alt.Axis(labelFontSize=15)).sort('-x'),
     color=alt.condition(selector, 'Avg_Salary:Q', alt.value('lightgray'), legend=None),
-    tooltip=['Job:N', alt.Tooltip('Avg_Salary:Q', format="")]#hover effect on bars
+    tooltip=['Job:N', alt.Tooltip('Avg_Salary:Q', format="$,")]#hover effect on bars
 ).add_selection(
     selector
 ).properties(
