@@ -17,7 +17,7 @@ with col1:
     job_title = st.selectbox("Job Title:",
                  ["Data Engineer", "Data Scientist", "Data Analyst",
                   "Bussiness Analyst",
-                  "Machine Learning Engineer", "Cloud Engineer"],  
+                  "ML Engineer", "Cloud Engineer"],  
                   )
 with col2:
     country = st.selectbox("Country:", 
@@ -55,7 +55,7 @@ hor_bar = alt.Chart(source).mark_bar(
 ).encode(
     x=alt.X('Salary:Q', axis=alt.Axis(format='', labelFontSize=0, titleFontSize=0, labelPadding=20)),
     y=alt.Y('Skill:N', sort=None, title="", axis=alt.Axis(labelFontSize=20)).sort('-x'),
-    color=alt.condition(selector, 'Salary:Q', alt.value('lightgray'), legend=None),
+    color=alt.Color('Salary:Q', scale=alt.Scale(scheme='lightgreyteal'), legend=None),
     tooltip=['Skill:N', alt.Tooltip('Salary:Q', format="$,")]#hover effect on bars
 ).add_selection(
     selector

@@ -55,7 +55,8 @@ hor_bar = alt.Chart(source).mark_bar(
 ).encode(
     x=alt.X('Percentage:Q', axis=alt.Axis(format='', labelFontSize=0, titleFontSize=0, labelPadding=20)),
     y=alt.Y('Skill:N', sort=None, title="", axis=alt.Axis(labelFontSize=20)).sort('-x'),
-    color=alt.condition(selector, 'Percentage:Q', alt.value('lightgray'), legend=None),
+    color=alt.Color('Percentage:Q', scale=alt.Scale(scheme='darkmulti'), legend=None),
+    #color=alt.condition(selector, 'Percentage:Q', alt.value('lightgray'), legend=None),
     tooltip=['Skill:N', alt.Tooltip('Percentage:Q', format=".2%")]#hover effect on bars
 ).add_selection(
     selector
