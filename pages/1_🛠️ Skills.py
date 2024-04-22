@@ -78,3 +78,4 @@ graph = graph.configure_axis(grid=False)
 
 # Display the chart
 st.altair_chart(graph)
+
